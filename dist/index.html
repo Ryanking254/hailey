@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Hailey ❤️ — A Little Surprise</title>
+    <meta name="description" content="A little surprise for Hailey" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-HN4uf1Fr.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D2qhUNQj.css">
+  </head>
+  <body>
+    <div id="hearts-bg"></div>
+    <div id="confetti-canvas"></div>
+
+    <main id="app">
+      <!-- PAGE 1: INTRO -->
+      <section id="page-intro" class="page active">
+        <div class="screen">
+          <div class="cd-corner">
+            <button id="cd-btn" class="cd" aria-label="Play Twilight by Evan" title="Twilight — Evan">
+              <span class="cd-hole"><span id="cd-icon">▶</span></span>
+              <span class="note n1">♪</span>
+              <span class="note n2">♫</span>
+              <span class="note n3">♪</span>
+            </button>
+            <p class="cd-title"><strong>Twilight</strong> — Evan</p>
+            <p class="muted small" id="cd-hint">tap to play ▶</p>
+            <!--
+              SONG FILE
+              Drop your audio file into the /public folder as:
+                public/twilight-evan.mp3
+              (mp3, m4a or ogg all work — just update the src below)
+            -->
+            <audio id="bg-song" loop preload="auto">
+              <source src="./twilight-evan.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+          <p class="eyebrow">✨ hey you ✨</p>
+          <h1 class="title">Hi Hailey<span class="heart-beat">❤️</span></h1>
+          <p class="subtitle typewriter" id="typewriter"></p>
+
+          <div class="letter">
+            <p>
+              Before anything else, I just want you to know — you make ordinary
+              days feel special. The way you laugh, the way you care, the way
+              you just <em>are</em>… I haven't stopped thinking about it.
+            </p>
+            <p>
+              I find myself looking forward to the hours when it's just us —
+              no noise, no rush, just you and me together. Those are my
+              favourite hours in the whole week.
+            </p>
+            <p>
+              And can we talk about how ridiculously multi-talented you are?
+              Piano — the thing I've been dying to learn for the longest time,
+              and you just glide across the keys like it's nothing 🎹. Swimming —
+              you cut through the water like it was made for you, fast, graceful,
+              unstoppable 🌊. Hockey, robotics… you'd probably make a
+              brilliant lawyer too. Honestly, I'm still a little jealous —
+              is there anything you <em>can't</em> do? 😄
+            </p>
+            <p>
+              I love how chill you are about everything — that calm,
+              nonchalant energy that makes me feel like everything will be
+              okay. You always know how to reassure me, even when I don't say
+              a word. You just… get me.
+            </p>
+            <p>
+              And those eyes of yours — that whole <em>ocean</em> of eyes.
+              One look and I'm drowning, happily, no lifeguard needed 🌊.
+              I could gaze into them all day and still find new depths every
+              time. Careful… a person could get lost in there forever.
+            </p>
+            <p>
+              Truthfully? I just love everything about you. Every little thing.
+            </p>
+            <p>
+              I made this tiny corner of the internet just for you. No
+              distractions, no rush. Just you, me, and one very important
+              question at the end.
+            </p>
+            <p class="sign">— with all my love</p>
+          </div>
+
+          <div class="little-things">
+            <div class="thing">🌙 hours that are just us</div>
+            <div class="thing">🎹 piano (teach me someday? 🥺)</div>
+            <div class="thing">🌊 swimming like the water's yours</div>
+            <div class="thing">🏑 hockey</div>
+            <div class="thing">🤖 robotics</div>
+            <div class="thing">⚖️ future lawyer</div>
+            <div class="thing">👀 that ocean of eyes</div>
+            <div class="thing">😌 your calm, chill energy</div>
+            <div class="thing">💫 how you always reassure me</div>
+          </div>
+
+          <button class="btn btn-love" data-go="page-video">
+            <span>A little surprise for you</span>
+            <span class="arrow">→</span>
+          </button>
+          <p class="hint">psst… tap it, I promise it's worth it 💌</p>
+        </div>
+      </section>
+
+      <!-- PAGE 2: VIDEO -->
+      <section id="page-video" class="page">
+        <div class="screen">
+          <button class="btn-back" data-go="page-intro">← back</button>
+          <p class="eyebrow">🎬 a message from me</p>
+          <h2 class="title-sm">Press play, beautiful</h2>
+          <p class="muted">
+            I wanted to say this part face-to-face… well, screen-to-face. Hit
+            play when you're ready.
+          </p>
+
+          <!--
+            VIDEO PLACEHOLDER
+            1. Drop your video file into the /public folder (e.g. public/my-video.mp4)
+            2. Change the src below to "./my-video.mp4"
+          -->
+          <div class="video-frame">
+            <video id="love-video" controls playsinline preload="metadata" poster="">
+              <source src="./placeholder-video.mp4" type="video/mp4" />
+              Your browser doesn't support video — but I still love you.
+            </video>
+            <div id="video-placeholder" class="video-placeholder">
+              <div class="placeholder-icon">🎥</div>
+              <p><strong>Your video goes here</strong></p>
+              <p class="muted small">
+                No video yet — just a placeholder for now.<br />
+                To add it: drop <code>my-video.mp4</code> into
+                <code>/public</code> and change the
+                <code>&lt;source src&gt;</code> in <code>index.html</code>.
+              </p>
+            </div>
+          </div>
+
+          <button class="btn btn-love" data-go="page-question">
+            <span>One more thing…</span>
+            <span class="arrow">💖</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- PAGE 3: QUESTION -->
+      <section id="page-question" class="page">
+        <div class="screen">
+          <button class="btn-back" data-go="page-video">← back</button>
+          <p class="eyebrow">💍 the big question</p>
+          <h2 class="big-question">Hailey, will you be<br />my girlfriend? 🥺❤️</h2>
+          <p class="muted" id="no-tease">Choose wisely… 😏</p>
+
+          <div class="choices">
+            <button id="btn-yes" class="btn btn-yes">Yes! ❤️</button>
+            <button id="btn-no" class="btn btn-no">No 🙈</button>
+          </div>
+
+          <p class="hint">…the "no" button seems a little shy today 👀</p>
+        </div>
+      </section>
+
+      <!-- PAGE 4: CELEBRATION -->
+      <section id="page-yes" class="page">
+        <div class="screen">
+          <p class="eyebrow">🎉 she said yes 🎉</p>
+          <h2 class="title">Best. Day. Ever. ❤️</h2>
+          <div class="big-heart">💖</div>
+          <p class="subtitle">
+            Hailey, you just made me the happiest person alive.<br />
+            It's official — you're my girlfriend. 🥰
+          </p>
+          <div class="ticket">
+            <div><span class="muted small">CERTIFIED COUPLE</span><br /><strong>Hailey ❤️ + You</strong></div>
+            <div class="ticket-date" id="ticket-date"></div>
+          </div>
+          <div class="row">
+            <button class="btn btn-love" id="btn-celebrate">Celebrate more 🎊</button>
+            <button class="btn btn-ghost" data-go="page-intro">Replay ↺</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>
