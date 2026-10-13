@@ -48,19 +48,22 @@ for (let i = 0; i < 12; i++) setTimeout(spawnHeart, i * 200)
 const video = document.getElementById('love-video')
 const placeholder = document.getElementById('video-placeholder')
 
-function checkVideo() {
-  // If a real video source loads, hide the placeholder overlay
-  if (video.currentSrc && !video.currentSrc.includes('placeholder-video')) {
-    placeholder.classList.add('hidden')
-  }
+function hidePlaceholder() {
+  placeholder.classList.add('hidden')
 }
-video.addEventListener('loadeddata', () => placeholder.classList.add('hidden'))
-video.addEventListener('error', () => placeholder.classList.remove('hidden'), true)
-// If the placeholder file 404s (expected until you add yours), keep overlay visible
-video.querySelector('source')?.addEventListener('error', () => {
+
+function showPlaceholder() {
   placeholder.classList.remove('hidden')
-})
-checkVideo()
+}
+
+// Hide overlay as soon as any real video data can play
+video.addEventListener('loadeddata', hidePlaceholder)
+video.addEventListener('canplay', hidePlaceholder)
+// If the file 404s (e.g. stale Vercel deployment), keep overlay visible
+video.addEventListener('error', showPlaceholder, true)
+video.querySelector('source')?.addEventListener('error', showPlaceholder)
+// In case the video was already cached/loaded before listeners attached
+if (video.readyState >= 2) hidePlaceholder()
 // Clicking the placeholder tries to play (will fail gracefully until replaced)
 placeholder.addEventListener('click', () => video.play?.().catch(() => {}))
 
